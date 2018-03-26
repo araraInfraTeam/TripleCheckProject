@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/css/drawer.min.css">
   <!-- jquery & iScroll -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
   <!-- drawer.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/js/drawer.min.js"></script>
@@ -37,7 +38,6 @@
         <li></li>
         <li></li>
         <li></li>
-
       </ul>
     </div>
     <div class='header_pc_low'>
@@ -45,10 +45,37 @@
     </div>
   </header>
   
-  
-  <main>
+  <main style="margin-left: 150px ">
+    <form>
+      <input type="text" name="name" id='inputValCheck'>
+
+      <input type="submit" name="" id='output'>
+    </form>
   </main>
-  
+  <script type="text/javascript">
+  // #inputValCheckに値が入っているときのみ#output要素を出力
+  $(function() {
+    var $inputValCheck = $('#inputValCheck');
+    var $output = $('#output');
+    var startVal = $inputValCheck.val()
+    // ページ読み込み時に値が入ってるか確認
+    // 空であればdisplay none
+    if ( startVal == ''){
+      $output.css('display', 'none');
+    }
+    // inputに対する変更があったときにリアルタイムで実行
+    $inputValCheck.on('input', function(event) {
+      var value = $inputValCheck.val();
+      //空ならdisplay none
+      if (! value == ''){
+        $output.css('display', 'inline-block');
+      }else{
+        $output.css('display', 'none');
+      }
+    })
+  });
+  </script>
+
   <footer>
   </footer>
   </body>
