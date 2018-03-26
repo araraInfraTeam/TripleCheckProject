@@ -18,7 +18,7 @@
   padding: 0;
   color: #333;
   font-family: "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
-font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   box-sizing: border-box;
   word-break: break-all;
@@ -33,6 +33,8 @@ h4{font-size: 28px; font-weight: 700; margin-bottom: 12px; text-align: center;}
 h5{font-size: 24px; font-weight: 700; margin-bottom: 10px; text-align: center;}
 h6{font-size: 20px; font-weight: 700; margin-bottom: 8px; text-align: center;}
 p{font-size: 16px; font-weight: 400;}
+
+.ts05s{transition: all 500ms 0s ease;}
 
 header{
   position: fixed;
@@ -70,5 +72,28 @@ header{
       line-height: 50px;
       font-weight: 900;
     }
+  }
+}
+
+form{
+  width: 90%;
+  margin: 0 5%;
+  padding-top: 30px;
+  label{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  input[type="text"]{
+    height: 30px;
+    width: 100%;
+    padding: 0 5px;
+    margin-bottom: 20px;
+  }
+  input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 30px;
   }
 }

@@ -47,9 +47,12 @@
   
   <main style="margin-left: 150px ">
     <form>
+      <label>Domain:</label>
+      <input type="text" name="name" id='inputValCheck'>
+      <label>Type:</label>
       <input type="text" name="name" id='inputValCheck'>
 
-      <input type="submit" name="" id='output'>
+      <input type="submit" name="" id='output' class='ts05s'>
     </form>
   </main>
   <script type="text/javascript">
@@ -61,16 +64,19 @@
     // ページ読み込み時に値が入ってるか確認
     // 空であればdisplay none
     if ( startVal == ''){
-      $output.css('display', 'none');
+      //$output.css('display', 'none');
+      $output.css('opacity', '0.0');
     }
     // inputに対する変更があったときにリアルタイムで実行
     $inputValCheck.on('input', function(event) {
       var value = $inputValCheck.val();
       //空ならdisplay none
       if (! value == ''){
-        $output.css('display', 'inline-block');
+        //$output.css('display', 'inline-block');
+        $output.css('opacity', '1.0');
       }else{
-        $output.css('display', 'none');
+        //$output.css('display', 'none');
+        $output.css('opacity', '0.0');
       }
     })
   });
