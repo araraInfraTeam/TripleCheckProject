@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <header>
+  <header id='header_pc'>
     <div class='header_pc_high'>
       <h1>TRIPLE<br>CHECK<br><small>PROJECT</small></h1>
     </div>
@@ -45,17 +45,22 @@
     </div>
   </header>
   
-  <main style="margin-left: 150px ">
-    <form>
-      <label>Domain:</label>
-      <input type="text" name="name" id='inputValCheck'>
-      <label>Type:</label>
-      <input type="radio" name="name"><label>Aレコード</label>
-      <input type="radio" name="name"><label>MXレコード</label>
-      <input type="radio" name="name"><label>TXTレコード</label>
+  <main>
+    <div id='main_header'>
+      <h2>DNSチェックツール</h2>
+    </div>
+    <div id='main_contents'>
+      <form>
+        <label>Domain:</label>
+        <input type="text" name="name" id='inputValCheck'>
+        <label>Type:</label>
+        <input type="radio" name="name"><label class='smallLabel'>Aレコード</label>
+        <input type="radio" name="name"><label class='smallLabel'>MXレコード</label>
+        <input type="radio" name="name"><label class='smallLabel'>TXTレコード</label>
 
-      <input type="submit" name="" id='output' class='ts05s'>
-    </form>
+        <input type="submit" name="" id='output' class='ts05s'>
+      </form>
+    </div>
   </main>
   <script type="text/javascript">
   // #inputValCheckに値が入っているときのみ#output要素を出力

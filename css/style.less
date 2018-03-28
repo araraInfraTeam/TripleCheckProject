@@ -49,11 +49,14 @@ p{font-size: 16px; font-weight: 400;}
 
 .ts05s{transition: all 500ms 0s ease;}
 
-header{
+#header_pc{
   position: fixed;
   width: 150px;
   height: 100%;
   background: @color_gray;
+  @media screen and (max-width:480px) {
+    display: none;
+  }
   .header_pc_high{
     display: table-cell;
     vertical-align: middle;
@@ -88,26 +91,50 @@ header{
   }
 }
 
-form{
-  width: 90%;
-  margin: 0 5%;
-  padding-top: 30px;
-  label{
-    display: block;
-    font-weight: 500;
-    margin-bottom: 10px;
+main{
+  margin-left: 150px;
+  @media screen and (max-width:480px) {
+    margin-left: 0px;
   }
-  input[type="text"]{
-    height: 30px;
-    width: 100%;
-    padding: 0 5px;
-    margin-bottom: 20px;
-    .radius(3px);
+  #main_header{
+    height: 150px;
+    text-align: center;
+
+    background: @color_black;
+    h2{
+      color: @color_green;
+      font-size: 24px;
+      line-height: 150px;
+    }
   }
-  input[type="submit"]{
-    display: block;
-    margin: 0 auto;
-    width: 250px;
-    height: 30px;
+  form{
+    width: 90%;
+    margin: 0 5%;
+    padding-top: 30px;
+    label{
+      display: block;
+      font-weight: 500;
+      margin-bottom: 10px;
+      &.smallLabel{
+        display: inline;
+        font-size: 14px;
+        margin: 0px 10px 0px 5px;
+      }
+    }
+    input[type="text"]{
+      height: 30px;
+      width: 100%;
+      padding: 0 5px;
+      margin-bottom: 20px;
+      .radius(3px);
+    }
+    input[type="submit"]{
+      display: block;
+      margin: 30px auto;
+      width: 250px;
+      height: 30px;
+    }
   }
+
 }
+
