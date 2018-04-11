@@ -50,13 +50,13 @@
       <h2>DNSチェックツール</h2>
     </div>
     <div id='main_contents'>
-      <form>
+      <form action="./execute.php" method="post">
         <label>Domain:</label>
-        <input type="text" name="name" id='inputValCheck'>
+        <input type="text" name="text" id='inputValCheck'>
         <label>Type:</label>
-        <input type="radio" name="name"><label class='smallLabel'>Aレコード</label>
-        <input type="radio" name="name"><label class='smallLabel'>MXレコード</label>
-        <input type="radio" name="name"><label class='smallLabel'>TXTレコード</label>
+        <input type="radio" name="a_record"><label class='smallLabel'>Aレコード</label>
+        <input type="radio" name="mx_record"><label class='smallLabel'>MXレコード</label>
+        <input type="radio" name="txt_record"><label class='smallLabel'>TXTレコード</label>
 
         <input type="submit" name="" id='output' class='ts05s'>
       </form>
